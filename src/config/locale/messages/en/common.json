@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "ShipAny Template Two",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
-    "keywords": "shipany, shipany-boilerplate, shipany-template-two-demo"
+    "title": "LinkedIn Translator — Free AI Tool to Translate LinkedIn Speak",
+    "description": "Translate normal text into LinkedIn-speak, or decode LinkedIn posts back to plain English. Free, AI-powered, no sign-up required.",
+    "keywords": "LinkedIn translator, LinkedIn speak translator, corporate jargon translator, LinkedIn post generator, translate to LinkedIn, decode LinkedIn posts"
   },
   "sign": {
     "sign_in_title": "Sign In",
