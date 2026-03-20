@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from 'react';
-import { ArrowRightLeft, Check, Copy, Share2 } from 'lucide-react';
+import { ArrowRightLeft, Check, Copy, Lock, Share2 } from 'lucide-react';
 
 import { Button } from '@/shared/components/ui/button';
 import { Card, CardContent } from '@/shared/components/ui/card';
@@ -141,8 +141,8 @@ export function TranslatorPanel() {
         <Card className="relative">
           {isLoading && <LoadingOverlay direction={direction} />}
           <CardContent className="space-y-2">
-            {/* 输出版本切换 */}
-            {output?.best && (
+            {/* 输出版本切换 — Best 版本免费用户显示模糊 + 升级提示 */}
+            {output && (
               <Tabs
                 value={activeTab}
                 onValueChange={(val) => setActiveTab(val as OutputTab)}
@@ -151,8 +151,9 @@ export function TranslatorPanel() {
                   <TabsTrigger value="standard" className="text-xs">
                     Standard
                   </TabsTrigger>
-                  <TabsTrigger value="best" className="text-xs">
-                    Best
+                  <TabsTrigger value="best" className="gap-1 text-xs">
+                    <Lock className="size-3" />
+                    Best (Pro)
                   </TabsTrigger>
                 </TabsList>
               </Tabs>
@@ -162,6 +163,25 @@ export function TranslatorPanel() {
             <div className="min-h-[200px] whitespace-pre-wrap text-sm leading-relaxed">
               {error ? (
                 <p className="text-destructive">{error}</p>
+              ) : activeTab === 'best' && output ? (
+                <div className="relative">
+                  <p className="select-none blur-sm">
+                    {output.best || output.standard}
+                  </p>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-lg bg-background/60 backdrop-blur-[2px]">
+                    <Lock className="size-6 text-[#0077B5]" />
+                    <p className="text-sm font-medium">
+                      Upgrade to Pro to unlock the Best version
+                    </p>
+                    <Button
+                      asChild
+                      size="sm"
+                      className="bg-[#0077B5] text-white hover:bg-[#005f8d]"
+                    >
+                      <a href="/pricing">Upgrade to Pro — $9/mo</a>
+                    </Button>
+                  </div>
+                </div>
               ) : currentOutput ? (
                 currentOutput
               ) : (

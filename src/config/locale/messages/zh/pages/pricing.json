@@ -1,358 +1,305 @@
 {
   "metadata": {
-    "title": "价格",
-    "description": "选择方案，立即开始"
+    "title": "定价 — LinkedIn 翻译器",
+    "description": "LinkedIn 翻译器简洁透明的定价方案。免费开始，按需升级。"
   },
   "page": {
-    "title": "ShipAny 价格表",
+    "title": "LinkedIn 翻译器定价",
     "sections": {
       "pricing": {
         "id": "pricing",
-        "title": "价格",
-        "description": "获取 ShipAny 的全部功能，极速交付你的 AI SaaS 创业项目。",
+        "title": "简洁透明的定价",
+        "description": "免费开始翻译。升级即可享受无限使用和高级功能。",
         "groups": [
           {
             "name": "one-time",
-            "title": "按次付费"
+            "title": "积分包"
           },
           {
             "name": "monthly",
-            "title": "包月",
+            "title": "月付",
             "is_featured": true,
-            "label": "立省15%"
+            "label": "最受欢迎"
           },
           {
             "name": "yearly",
-            "title": "包年"
+            "title": "年付",
+            "label": "省 33%"
           }
         ],
         "items": [
           {
-            "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "title": "Starter Pack",
+            "description": "小额积分包，轻松体验。",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 个月",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "100 次翻译积分",
+              "积分永不过期",
+              "标准 + 最佳输出",
+              "所有语气强度",
+              "所有场景模式"
             ],
             "interval": "one-time",
-            "amount": 9900,
+            "amount": 190,
             "currency": "USD",
-            "price": "$99",
-            "original_price": "$199",
-            "currencies": [
-              {
-                "currency": "CNY",
-                "amount": 69900,
-                "price": "¥699",
-                "original_price": "¥1399",
-                "payment_providers": ["stripe"]
-              }
-            ],
+            "price": "$1.90",
             "unit": "",
             "is_featured": false,
-            "tip": "一次付费，畅享无限项目部署！",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "购买积分",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "starter",
-            "product_name": "ShipAny 模板入门版",
+            "product_id": "starter-credits",
+            "product_name": "LinkedIn Translator Starter Pack",
             "credits": 100,
-            "valid_days": 30,
+            "valid_days": 3650,
             "group": "one-time"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
-            "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "title": "Power Pack",
+            "description": "高频用户的最佳性价比之选。",
+            "label": "超值",
+            "features_title": "包含",
             "features": [
-              "200 积分，有效期 3 个月",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "500 次翻译积分",
+              "积分永不过期",
+              "标准 + 最佳输出",
+              "所有语气强度",
+              "所有场景模式",
+              "翻译历史记录"
+            ],
+            "interval": "one-time",
+            "amount": 790,
+            "currency": "USD",
+            "price": "$7.90",
+            "original_price": "$9.50",
+            "unit": "",
+            "is_featured": true,
+            "button": {
+              "title": "购买积分",
+              "url": "/#pricing",
+              "icon": "RiFlashlightFill"
+            },
+            "product_id": "power-credits",
+            "product_name": "LinkedIn Translator Power Pack",
+            "credits": 500,
+            "valid_days": 3650,
+            "group": "one-time"
+          },
+          {
+            "title": "Lifetime",
+            "description": "一次付费，终身翻译。",
+            "features_title": "包含",
+            "features": [
+              "10,000 次翻译积分",
+              "积分永不过期",
+              "标准 + 最佳输出",
+              "所有语气强度",
+              "所有场景模式",
+              "翻译历史记录",
+              "优先支持"
             ],
             "interval": "one-time",
             "amount": 19900,
             "currency": "USD",
             "price": "$199",
-            "original_price": "$299",
-            "currencies": [
-              {
-                "currency": "CNY",
-                "amount": 139900,
-                "price": "¥1399",
-                "original_price": "¥1999",
-                "payment_providers": ["stripe"]
-              }
-            ],
+            "original_price": "$499",
             "unit": "",
-            "is_featured": true,
-            "tip": "一次付费，畅享无限项目部署！",
+            "is_featured": false,
             "button": {
-              "title": "获取 ShipAny",
+              "title": "获取终身版",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "standard",
-            "product_name": "ShipAny 模板标准版",
-            "credits": 200,
-            "valid_days": 90,
+            "product_id": "lifetime-credits",
+            "product_name": "LinkedIn Translator Lifetime",
+            "credits": 10000,
+            "valid_days": 3650,
             "group": "one-time"
           },
           {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
-            "features": [
-              "300 积分，有效期 1 年",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
-            ],
-            "interval": "one-time",
-            "amount": 29900,
-            "currency": "USD",
-            "price": "$299",
-            "original_price": "$399",
-            "currencies": [
-              {
-                "currency": "CNY",
-                "amount": 199900,
-                "price": "¥1999",
-                "original_price": "¥2799",
-                "payment_providers": ["stripe", "creem"]
-              }
-            ],
-            "unit": "",
-            "is_featured": false,
-            "tip": "一次付费，畅享无限项目部署！",
-            "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "premium",
-            "product_name": "ShipAny 模板高级版",
-            "credits": 300,
-            "valid_days": 365,
-            "group": "one-time"
-          },
-          {
-            "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "title": "Free",
+            "description": "免费开始基础翻译。",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 个月",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "每天 10 次翻译",
+              "仅标准输出",
+              "所有语气强度",
+              "通用场景模式"
             ],
             "interval": "month",
-            "amount": 8900,
+            "amount": 0,
             "currency": "USD",
-            "price": "$89",
-            "original_price": "$99",
+            "price": "$0",
             "unit": "/ 月",
             "is_featured": false,
-            "tip": "按月付费，畅享无限项目部署！",
             "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
+              "title": "免费开始",
+              "url": "/sign-up",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "starter-monthly",
-            "product_name": "ShipAny 模板入门版包月",
-            "credits": 100,
+            "product_id": "free-monthly",
+            "product_name": "LinkedIn Translator Free",
+            "credits": 0,
             "valid_days": 30,
-            "group": "monthly",
-            "plan_name": "入门版"
+            "group": "monthly"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
+            "title": "Pro",
+            "description": "为经常发帖的 LinkedIn 活跃用户打造。",
             "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "features_title": "包含 Free 全部功能，此外",
             "features": [
-              "200 积分，有效期 1 个月",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "每月 499 次翻译",
+              "标准 + 最佳输出",
+              "所有场景模式",
+              "翻译历史记录",
+              "优先支持",
+              "随时取消"
             ],
             "interval": "month",
-            "amount": 16900,
+            "amount": 900,
             "currency": "USD",
-            "price": "$169",
-            "original_price": "$199",
+            "price": "$9",
+            "original_price": "$15",
             "unit": "/ 月",
             "is_featured": true,
-            "tip": "按月付费，极速上线你的 SaaS 项目。",
+            "tip": "职场人最热门的选择",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级到 Pro",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "standard-monthly",
-            "product_name": "ShipAny 模板标准版包月",
-            "credits": 200,
+            "product_id": "pro-monthly",
+            "product_name": "LinkedIn Translator Pro Monthly",
+            "plan_name": "Pro",
+            "credits": 499,
             "valid_days": 30,
-            "group": "monthly",
-            "plan_name": "标准版"
+            "group": "monthly"
           },
           {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
+            "title": "Business",
+            "description": "为管理多个账号的团队和机构打造。",
+            "features_title": "包含 Pro 全部功能，此外",
             "features": [
-              "300 积分，有效期 1 个月",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
+              "每月 2,000 次翻译",
+              "API 访问",
+              "批量翻译",
+              "团队协作",
+              "专属支持",
+              "随时取消"
             ],
             "interval": "month",
-            "amount": 24900,
+            "amount": 2900,
             "currency": "USD",
-            "price": "$249",
-            "original_price": "$299",
+            "price": "$29",
+            "original_price": "$49",
             "unit": "/ 月",
             "is_featured": false,
-            "tip": "按月付费，助你交付任何 AI SaaS 项目。",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级到 Business",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "premium-monthly",
-            "product_name": "ShipAny 模板高级版包月",
-            "credits": 300,
+            "product_id": "business-monthly",
+            "product_name": "LinkedIn Translator Business Monthly",
+            "plan_name": "Business",
+            "credits": 2000,
             "valid_days": 30,
-            "group": "monthly",
-            "plan_name": "高级版"
+            "group": "monthly"
           },
           {
-            "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "title": "Free",
+            "description": "免费开始基础翻译。",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 年",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "每天 10 次翻译",
+              "仅标准输出",
+              "所有语气强度",
+              "通用场景模式"
             ],
             "interval": "year",
-            "amount": 82800,
+            "amount": 0,
             "currency": "USD",
-            "price": "$69",
-            "original_price": "$89",
-            "unit": "/ 月",
+            "price": "$0",
+            "unit": "/ 年",
             "is_featured": false,
-            "tip": "按年付费，畅享无限项目部署！",
             "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
+              "title": "免费开始",
+              "url": "/sign-up",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "starter-yearly",
-            "product_name": "ShipAny 模板入门版包年",
-            "credits": 1200,
+            "product_id": "free-yearly",
+            "product_name": "LinkedIn Translator Free",
+            "credits": 0,
             "valid_days": 365,
-            "group": "yearly",
-            "plan_name": "入门版"
+            "group": "yearly"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
+            "title": "Pro",
+            "description": "为经常发帖的 LinkedIn 活跃用户打造。",
             "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "features_title": "包含 Free 全部功能，此外",
             "features": [
-              "200 积分，有效期 1 年",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "每月 499 次翻译",
+              "标准 + 最佳输出",
+              "所有场景模式",
+              "翻译历史记录",
+              "优先支持",
+              "随时取消"
             ],
             "interval": "year",
-            "amount": 154800,
+            "amount": 7188,
             "currency": "USD",
-            "price": "$129",
-            "original_price": "$169",
+            "price": "$5.99",
+            "original_price": "$9",
             "unit": "/ 月",
             "is_featured": true,
-            "tip": "按年付费，极速上线你的 SaaS 项目。",
+            "tip": "年付立省 33%",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级到 Pro",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "standard-yearly",
-            "product_name": "ShipAny 模板标准版包年",
-            "credits": 2400,
+            "product_id": "pro-yearly",
+            "product_name": "LinkedIn Translator Pro Annual",
+            "plan_name": "Pro",
+            "credits": 5988,
             "valid_days": 365,
-            "group": "yearly",
-            "plan_name": "标准版"
+            "group": "yearly"
           },
           {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
+            "title": "Business",
+            "description": "为管理多个账号的团队和机构打造。",
+            "features_title": "包含 Pro 全部功能，此外",
             "features": [
-              "300 积分，有效期 1 年",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
+              "每月 2,000 次翻译",
+              "API 访问",
+              "批量翻译",
+              "团队协作",
+              "专属支持",
+              "随时取消"
             ],
             "interval": "year",
-            "amount": 226800,
+            "amount": 23100,
             "currency": "USD",
-            "price": "$189",
-            "original_price": "$249",
+            "price": "$19.25",
+            "original_price": "$29",
             "unit": "/ 月",
             "is_featured": false,
-            "tip": "按年付费，助你交付任何 AI SaaS 项目。",
+            "tip": "年付立省 33%",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级到 Business",
               "url": "/#pricing",
               "icon": "RiFlashlightFill"
             },
-            "product_id": "premium-yearly",
-            "product_name": "ShipAny 模板高级版包年",
-            "credits": 3600,
+            "product_id": "business-yearly",
+            "product_name": "LinkedIn Translator Business Annual",
+            "plan_name": "Business",
+            "credits": 24000,
             "valid_days": 365,
-            "group": "yearly",
-            "plan_name": "高级版"
+            "group": "yearly"
           }
         ]
       }
