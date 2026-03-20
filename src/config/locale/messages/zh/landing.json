@@ -153,6 +153,7 @@
       ]
     },
     "disclaimer": "本产品与 LinkedIn Corporation 无关联、未获其背书或授权。",
+    "show_built_with": false,
     "show_theme": true,
     "show_locale": true
   }

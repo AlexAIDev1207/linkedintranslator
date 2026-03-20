@@ -153,6 +153,7 @@
       ]
     },
     "disclaimer": "Not affiliated with, endorsed by, or connected to LinkedIn Corporation.",
+    "show_built_with": false,
     "show_theme": true,
     "show_locale": true
   }

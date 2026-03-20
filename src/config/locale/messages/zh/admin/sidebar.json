@@ -1,10 +1,10 @@
 {
   "header": {
     "brand": {
-      "title": "ShipAny Two",
+      "title": "LinkedIn 翻译器",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny Two"
+        "alt": "LinkedIn 翻译器"
       },
       "url": "/admin"
     },
