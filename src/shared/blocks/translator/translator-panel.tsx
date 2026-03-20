@@ -16,6 +16,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/shared/components/ui/tabs';
 import { Textarea } from '@/shared/components/ui/textarea';
 import { ToggleGroup, ToggleGroupItem } from '@/shared/components/ui/toggle-group';
 
+import { FeedbackWidget } from './feedback-widget';
 import { LoadingOverlay } from './loading-overlay';
 import {
   CONTEXT_OPTIONS,
@@ -43,6 +44,8 @@ export function TranslatorPanel() {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<OutputTab>('standard');
   const [copied, setCopied] = useState(false);
+  // TODO: MVP 阶段仅记录本地状态，后续接入反馈 API
+  const [_feedback, setFeedback] = useState<'up' | 'down' | null>(null);
 
   /** 根据方向返回输入区域占位文本 */
   const placeholderText =
@@ -57,6 +60,7 @@ export function TranslatorPanel() {
     setError(null);
     setIsLoading(true);
     setOutput(null);
+    setFeedback(null);
 
     try {
       const result = await translateText({
@@ -220,6 +224,12 @@ export function TranslatorPanel() {
                 </Button>
               </div>
             )}
+
+            {/* 翻译反馈组件 */}
+            <FeedbackWidget
+              visible={!!output && !error}
+              onFeedback={(rating) => setFeedback(rating)}
+            />
           </CardContent>
         </Card>
       </div>

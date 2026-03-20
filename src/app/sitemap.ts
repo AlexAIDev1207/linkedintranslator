@@ -6,6 +6,20 @@ import { envConfigs } from '@/config';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = envConfigs.app_url;
 
+  /** 博客文章 slug 列表 */
+  const blogSlugs = [
+    'linkedin-buzzwords-translated',
+    'how-to-write-linkedin-post',
+    'linkedin-speak-examples',
+    'linkedin-new-job-announcement',
+    'corporate-jargon-translator',
+    'linkedin-post-templates',
+    'why-linkedin-posts-cringe',
+    'linkedin-vs-real-life',
+    'best-linkedin-post-generators',
+    'decode-linkedin-recruiter-messages',
+  ];
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -39,5 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return staticPages;
+  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...blogPages];
 }

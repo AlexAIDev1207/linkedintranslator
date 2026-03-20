@@ -60,6 +60,35 @@ export default async function LandingPage({
       {/* 常见问题 */}
       <FaqSection />
 
+      {/* SoftwareApplication JSON-LD — 用于 Google 搜索结果和工具目录抓取 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'LinkedIn Translator',
+            url: 'https://linkedintranslator.net',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Web',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
+            description:
+              'Free AI tool to translate normal text into LinkedIn-speak, or decode LinkedIn posts back to plain English.',
+            featureList: [
+              'Bidirectional translation (to/from LinkedIn speak)',
+              'Multiple intensity levels (Light, Standard, Extreme)',
+              'Context-aware (Career, Promotion, Project)',
+              'No sign-up required',
+              'AI-powered',
+            ],
+          }),
+        }}
+      />
+
       {/* 底部 CTA */}
       <section className="bg-gradient-to-r from-[#0077B5]/10 to-[#00A0DC]/10 py-16 md:py-24">
         <div className="container mx-auto max-w-3xl px-4 text-center">
