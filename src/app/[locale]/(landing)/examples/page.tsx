@@ -7,17 +7,9 @@ import { Card, CardContent } from '@/shared/components/ui/card';
 
 /** 独立示例页 SEO 元数据 */
 export const metadata: Metadata = {
-  title:
-    'LinkedIn Translator Examples — Before & After LinkedIn Speak Translation',
+  title: 'LinkedIn Speak Examples — Before & After Translations',
   description:
-    'See real examples of LinkedIn Translator in action. Compare normal text with LinkedIn-speak translations across career announcements, project updates, and more.',
-  keywords: [
-    'LinkedIn speak examples',
-    'LinkedIn translator examples',
-    'LinkedIn post before after',
-    'LinkedIn buzzwords examples',
-    'LinkedIn jargon decoded',
-  ],
+    'See real LinkedIn Translator examples. Compare normal text with LinkedIn-speak across job posts, project updates, and more. Try it free.',
 };
 
 /** 翻译示例数据 */
@@ -138,6 +130,29 @@ export default async function ExamplesPage({
         </p>
       </div>
 
+      {/* 介绍段落 — SEO 内容补充 */}
+      <div className="mx-auto mb-14 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+        <p>
+          LinkedIn Translator helps you navigate the unique language of
+          LinkedIn. These examples show real before-and-after translations —
+          what you actually want to say versus what LinkedIn culture expects you
+          to write. Each example demonstrates how our LinkedIn Translator
+          converts simple, honest statements into the kind of polished,
+          engagement-optimized posts that dominate your feed. Whether
+          you&apos;re looking for inspiration for your next LinkedIn post or
+          just want to understand the patterns behind LinkedIn speak, these
+          side-by-side comparisons reveal the art (and absurdity) of
+          professional social media communication.
+        </p>
+        <p>
+          From humble-brag job announcements to over-the-top project launches,
+          the LinkedIn Translator captures every shade of corporate enthusiasm.
+          Browse the categories below, then try the LinkedIn Translator yourself
+          to turn your own words into peak LinkedIn energy — or decode any post
+          back into plain English.
+        </p>
+      </div>
+
       {/* 示例分类 */}
       {EXAMPLES.map((group) => (
         <section key={group.category} className="mb-12">
@@ -176,8 +191,30 @@ export default async function ExamplesPage({
         </section>
       ))}
 
+      {/* 相关内容链接 */}
+      <div className="mt-16 rounded-xl border bg-muted/20 p-8">
+        <h2 className="mb-4 text-lg font-semibold">Related Resources</h2>
+        <ul className="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <a href="/blog/linkedin-speak-examples" className="text-[#0077B5] underline underline-offset-2 hover:text-[#005f8d]">
+              20 More LinkedIn Speak Examples (Blog)
+            </a>
+          </li>
+          <li>
+            <a href="/blog/linkedin-buzzwords-translated" className="text-[#0077B5] underline underline-offset-2 hover:text-[#005f8d]">
+              50 LinkedIn Buzzwords Translated to Plain English
+            </a>
+          </li>
+          <li>
+            <a href="/blog/how-to-write-linkedin-post" className="text-[#0077B5] underline underline-offset-2 hover:text-[#005f8d]">
+              How to Write a LinkedIn Post That Doesn&apos;t Sound Fake
+            </a>
+          </li>
+        </ul>
+      </div>
+
       {/* 底部 CTA */}
-      <div className="mt-16 text-center">
+      <div className="mt-12 text-center">
         <h2 className="text-2xl font-bold">Try It Yourself</h2>
         <p className="mt-2 text-muted-foreground">
           Transform your own text into LinkedIn-speak or decode any post.

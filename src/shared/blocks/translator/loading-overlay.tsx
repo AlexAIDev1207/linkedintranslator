@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from 'react';
 
-/** 翻译方向类型 */
 type TranslateDirection = 'toLinkedIn' | 'toHuman';
 
-/** toLinkedIn 方向的加载提示语 */
+/** toLinkedIn 方向的趣味提示语 */
 const TO_LINKEDIN_MESSAGES: readonly string[] = [
   'Crafting your perfect LinkedIn post...',
   'Adding strategic vulnerability...',
@@ -15,9 +14,9 @@ const TO_LINKEDIN_MESSAGES: readonly string[] = [
   'Sprinkling in some thought leadership...',
   'Optimizing for maximum engagement...',
   'Adding a dash of personal branding...',
-] as const;
+];
 
-/** toHuman 方向的加载提示语 */
+/** toHuman 方向的趣味提示语 */
 const TO_HUMAN_MESSAGES: readonly string[] = [
   'Removing the fluff...',
   'Translating corporate speak...',
@@ -27,9 +26,8 @@ const TO_HUMAN_MESSAGES: readonly string[] = [
   'Decoding the humble brag...',
   'Stripping away the jargon...',
   'Searching for substance...',
-] as const;
+];
 
-/** 消息轮换间隔（毫秒） */
 const ROTATION_INTERVAL_MS = 2000;
 
 interface LoadingOverlayProps {
@@ -38,11 +36,10 @@ interface LoadingOverlayProps {
 
 /**
  * 翻译加载动画组件
- * 根据翻译方向显示不同的趣味提示语，每 2 秒轮换一次
+ * 脉冲动画 + 渐变遮罩 + 方向感知提示语
  */
 export function LoadingOverlay({ direction }: LoadingOverlayProps) {
   const [messageIndex, setMessageIndex] = useState(0);
-
   const messages =
     direction === 'toLinkedIn' ? TO_LINKEDIN_MESSAGES : TO_HUMAN_MESSAGES;
 
@@ -50,23 +47,23 @@ export function LoadingOverlay({ direction }: LoadingOverlayProps) {
     const timer = setInterval(() => {
       setMessageIndex((prev) => (prev + 1) % messages.length);
     }, ROTATION_INTERVAL_MS);
-
     return () => clearInterval(timer);
   }, [messages.length]);
 
   return (
-    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 rounded-xl bg-background/80 backdrop-blur-sm">
-      {/* 弹跳点动画 */}
-      <div className="flex items-center gap-1.5">
-        <span className="size-2.5 animate-bounce rounded-full bg-[#0077B5] [animation-delay:0ms]" />
-        <span className="size-2.5 animate-bounce rounded-full bg-[#0077B5] [animation-delay:150ms]" />
-        <span className="size-2.5 animate-bounce rounded-full bg-[#0077B5] [animation-delay:300ms]" />
+    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-5 rounded-[15px] bg-background/85 backdrop-blur-sm">
+      {/* 脉冲指示器 */}
+      <div className="relative flex items-center justify-center">
+        <span className="absolute size-10 animate-ping rounded-full bg-[#0077B5]/20" />
+        <span className="relative flex size-6 items-center justify-center rounded-full bg-[#0077B5]">
+          <span className="size-2 rounded-full bg-white" />
+        </span>
       </div>
 
-      {/* 轮换提示文案 */}
+      {/* 提示文案 */}
       <p
         key={messageIndex}
-        className="animate-fade-in text-sm font-medium text-muted-foreground"
+        className="animate-in fade-in slide-in-from-bottom-2 text-sm font-medium text-muted-foreground duration-300"
       >
         {messages[messageIndex]}
       </p>

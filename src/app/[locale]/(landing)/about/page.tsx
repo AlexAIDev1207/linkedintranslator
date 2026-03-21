@@ -107,6 +107,14 @@ export default async function AboutPage({
             fits the platform&apos;s norms or you just want to understand what
             someone is really saying, this tool meets you where you are.
           </p>
+          <p>
+            Studies show that 58% of professionals say their colleagues overuse
+            jargon, and 70% admit to using buzzwords they personally dislike.
+            LinkedIn Translator exists at this intersection — helping you
+            participate in the platform&apos;s communication norms without
+            losing your authentic voice. It&apos;s the bridge between what you
+            want to say and what LinkedIn expects to hear.
+          </p>
         </div>
       </section>
 
@@ -143,6 +151,90 @@ export default async function AboutPage({
         </div>
       </section>
 
+      {/* 功能与特性 */}
+      <section className="mb-12">
+        <h2
+          className="mb-4 text-2xl font-semibold"
+          style={{ color: LINKEDIN_BLUE }}
+        >
+          Features &amp; Capabilities
+        </h2>
+        <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+          <div>
+            <h3 className="mb-1 text-lg font-medium text-foreground">
+              Bidirectional Translation
+            </h3>
+            <p>
+              LinkedIn Translator works in both directions. Convert your
+              everyday language into polished LinkedIn-speak, or paste a
+              corporate-jargon-laden post and decode it back into plain English.
+              This two-way capability makes it equally useful for writing and
+              reading LinkedIn content.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-1 text-lg font-medium text-foreground">
+              Three Intensity Levels
+            </h3>
+            <p>
+              Not every post needs maximum corporate energy. Choose from Light
+              for a subtle professional polish, Standard for classic LinkedIn
+              tone, or Extreme for full-throttle thought-leader mode. Each level
+              is carefully calibrated to match real posting patterns seen across
+              the platform.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-1 text-lg font-medium text-foreground">
+              Five Context Modes
+            </h3>
+            <p>
+              Context matters. LinkedIn Translator offers five specialized modes
+              — General, Career, Promotion, Project, and Side Project — so the
+              output uses the right vocabulary and structure for your specific
+              situation. A job announcement sounds very different from a weekend
+              hackathon recap.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-1 text-lg font-medium text-foreground">
+              No Sign-up Required
+            </h3>
+            <p>
+              Privacy comes first. You can start using LinkedIn Translator
+              instantly without creating an account or handing over your email.
+              Your text is processed in real time and never stored. When
+              you&apos;re ready for more features, an optional account unlocks
+              higher usage limits.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-1 text-lg font-medium text-foreground">
+              AI-Powered Accuracy
+            </h3>
+            <p>
+              Under the hood, LinkedIn Translator is powered by large language
+              models trained on thousands of authentic LinkedIn posts. The AI
+              understands the subtle cues that separate a humble brag from a
+              genuine achievement and adapts the output so it reads naturally and
+              convincingly.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-1 text-lg font-medium text-foreground">
+              Free to Use
+            </h3>
+            <p>
+              Our generous free tier gives you plenty of translations every day
+              at no cost. For power users who need unlimited translations,
+              priority processing, and advanced features, the affordable Pro
+              plan offers exceptional value with transparent, no-surprise
+              pricing.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 使命 */}
       <section className="mb-12">
         <h2
@@ -165,7 +257,45 @@ export default async function AboutPage({
             the real message underneath the buzzwords. Language should connect
             people, not confuse them.
           </p>
+          <p>
+            We are committed to keeping LinkedIn Translator accessible to
+            everyone, with a free tier that covers most use cases and an
+            affordable Pro option for professionals who rely on the tool daily.
+            As LinkedIn&apos;s communication norms continue to evolve, so will
+            our translation engine — always staying one step ahead of the latest
+            buzzwords and posting trends.
+          </p>
         </div>
+      </section>
+
+      {/* 相关资源 */}
+      <section className="mb-12">
+        <h2
+          className="mb-4 text-2xl font-semibold"
+          style={{ color: LINKEDIN_BLUE }}
+        >
+          Learn More
+        </h2>
+        <ul className="space-y-2 text-base text-muted-foreground">
+          <li>
+            <a href="/examples" className="text-[#0077B5] underline underline-offset-2 hover:text-[#005f8d]">
+              LinkedIn Translator Examples
+            </a>{' '}
+            — See before &amp; after translations
+          </li>
+          <li>
+            <a href="/blog/linkedin-buzzwords-translated" className="text-[#0077B5] underline underline-offset-2 hover:text-[#005f8d]">
+              50 LinkedIn Buzzwords Decoded
+            </a>{' '}
+            — Our most popular blog post
+          </li>
+          <li>
+            <a href="/pricing" className="text-[#0077B5] underline underline-offset-2 hover:text-[#005f8d]">
+              Pricing
+            </a>{' '}
+            — Free tier and Pro plans
+          </li>
+        </ul>
       </section>
 
       {/* 免责声明 */}

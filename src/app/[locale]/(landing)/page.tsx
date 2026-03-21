@@ -8,25 +8,16 @@ import {
   FaqSection,
   HeroSection,
   HowItWorks,
+  TestimonialsSection,
+  WhySection,
 } from '@/shared/blocks/landing';
 import { TranslatorPanel } from '@/shared/blocks/translator';
 
 /** 页面级 SEO 元数据 */
 export const metadata: Metadata = {
-  title: 'LinkedIn Translator — Free AI Tool to Translate LinkedIn Speak',
+  title: 'LinkedIn Translator — Translate to/from LinkedIn Speak',
   description:
-    'Translate normal text into LinkedIn-speak, or decode LinkedIn posts back to plain English. Free, AI-powered, no sign-up required.',
-  keywords: [
-    'LinkedIn translator',
-    'LinkedIn post generator',
-    'LinkedIn speak',
-    'corporate jargon translator',
-    'LinkedIn buzzword translator',
-    'AI LinkedIn tool',
-    'LinkedIn post writer',
-    'translate to LinkedIn',
-    'decode LinkedIn posts',
-  ],
+    'Free AI LinkedIn Translator. Turn plain English into LinkedIn-speak or decode corporate posts back to normal. No sign-up required.',
 };
 
 export const revalidate = 3600;
@@ -57,8 +48,14 @@ export default async function LandingPage({
       {/* 使用步骤 */}
       <HowItWorks />
 
+      {/* 为什么选择 LinkedIn Translator */}
+      <WhySection />
+
       {/* 常见问题 */}
       <FaqSection />
+
+      {/* 用户评价 */}
+      <TestimonialsSection />
 
       {/* SoftwareApplication JSON-LD — 用于 Google 搜索结果和工具目录抓取 */}
       <script
@@ -90,24 +87,26 @@ export default async function LandingPage({
       />
 
       {/* 底部 CTA */}
-      <section className="bg-gradient-to-r from-[#0077B5]/10 to-[#00A0DC]/10 py-16 md:py-24">
+      <section className="relative overflow-hidden py-20 md:py-28">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0077B5]/[0.06] via-transparent to-[#00A0DC]/[0.06]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_50%_80%_at_50%_100%,rgba(0,119,181,0.08),transparent)]" />
         <div className="container mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            Try the LinkedIn Translator Now — It&apos;s Free
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
+            Ready to Speak Fluent LinkedIn?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
             Join thousands of professionals who use LinkedIn Translator to craft
-            the perfect post.
+            posts that actually get engagement.
           </p>
-          <div className="mt-8">
+          <div className="mt-10">
             <Button
               asChild
               size="lg"
-              className="bg-[#0077B5] px-8 text-base text-white hover:bg-[#005f8d]"
+              className="group h-12 rounded-xl bg-[#0077B5] px-8 text-base font-semibold text-white shadow-lg shadow-[#0077B5]/25 transition-all hover:bg-[#005f8d] hover:shadow-xl hover:shadow-[#0077B5]/30"
             >
               <a href="#translator">
-                Start Translating
-                <ArrowUp className="ml-1.5 size-4" />
+                Start Translating — It&apos;s Free
+                <ArrowUp className="ml-2 size-4 transition-transform group-hover:-translate-y-0.5" />
               </a>
             </Button>
           </div>
